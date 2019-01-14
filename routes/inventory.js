@@ -1,0 +1,1 @@
+var express = require('express');var router = express.Router();var inventory = require('diskdb');inventory = inventory.connect('db', ['inventory']);/* GET home page. */router.get('/', (req, res)=>{    res.render('index', { title: 'Inventory' });});module.exports = router;

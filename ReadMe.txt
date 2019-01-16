@@ -3,6 +3,7 @@ This will be document to track our work.
 1: Component entry page
   1A: GET to show all components with current stock.
   1B: POST to add new component
+    Completed
   1C: PUT to update component also to update stock details.
   1D: DELETE to remove a component from the list.
 

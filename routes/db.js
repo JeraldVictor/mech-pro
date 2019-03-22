@@ -13,6 +13,21 @@ var addComponent = (data, callback) => {
       measurement: data.measurement,
       quantity: data.quantity
     };
+    //get the user detail and save it in a separate table along with time and modifications
+    /*
+      For example:
+      If user name: Ganesh
+      {
+        updatedBy: "Ganesh",
+        updatedAt: Date and Time,
+        Details: [
+          {
+            record
+          }
+        ]
+      }
+      */
+
     if (data.componentName) {
       db.inventory.save(record);
       var confirm = db.inventory.find({ name: data.componentName });
@@ -39,6 +54,20 @@ var getComponent = callback => {
 };
 
 var updateComponent = (data, callback) => {
+  //get the user detail and save it in a separate table along with time and modifications
+  /*
+    For example:
+    If user name: Ganesh
+    {
+      updatedBy: "Ganesh",
+      updatedAt: Date and Time,
+      Details: [
+        {
+          data
+        }
+      ]
+    }
+    */
   var options = {
     multi: false,
     upsert: false
@@ -57,6 +86,20 @@ var updateComponent = (data, callback) => {
 };
 
 var deleteComponent = (data, callback) => {
+  //get the user detail and save it in a separate table along with time and modifications
+  /*
+    For example:
+    If user name: Ganesh
+    {
+      updatedBy: "Ganesh",
+      updatedAt: Date and Time,
+      Details: [
+        {
+          data
+        }
+      ]
+    }
+    */
   db.inventory.remove({ _id: data._id });
   var record = db.inventory.find({ _id: data._id });
   // callback(detail, "");

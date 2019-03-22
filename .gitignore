@@ -1,6 +1,7 @@
 .DS_Store
 node_modules/
 APICall
+ReadMe.txt
 
 # Editor directories and files
 .idea

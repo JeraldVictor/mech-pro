@@ -2,6 +2,7 @@ This will be document to track our work.
 
 1: Component entry page
   1A: GET to show all components with current stock.
+    Completed
   1B: POST to add new component
     Completed
   1C: PUT to update component also to update stock details.
@@ -16,3 +17,7 @@ Expect 1A all commands should track who did it in a separate table(in our case a
   2D: DELETE to remove a valve from our database.
 
 Expect 2A all commands should track who did it in a separate table.
+
+
+Request can be made from client using below as header.
+Content-Type: application/json

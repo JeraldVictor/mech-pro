@@ -16,6 +16,17 @@ router.get("/component", (req, res) => {
   });
 });
 
+router.get("/scomponent", (req, res) => {
+  // res.render("index", { title: "Inventory" });
+  db.getSpecificComponent(req.query.name, (data, err) => {
+    if (err) {
+      res.status(404).send(err);
+    } else {
+      res.send(data);
+    }
+  });
+});
+
 //to add component in db.
 router.post("/component", (req, res) => {
   db.addComponent(req.body, (data, err) => {

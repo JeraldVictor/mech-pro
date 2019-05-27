@@ -3,9 +3,60 @@
   <head>
     <title>Mechano</title>
     <link rel='stylesheet' href='/stylesheets/style.css' />
-  </head>
+    <link rel="stylesheet" href="http://code.jquery.com/ui/1.9.2/themes/base/jquery-ui.css">
+    <script src="http://code.jquery.com/jquery-1.8.3.js"></script>
+    <script src="http://code.jquery.com/ui/1.9.2/jquery-ui.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/chosen/1.4.2/chosen.jquery.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/chosen/1.4.2/chosen.css">
+    </head>
   <body>
-    <h1><%= title %></h1>
-    <p>Welcome to <%= title %></p>
+  <script type="text/javascript">
+    $(function() {
+    $(".chzn-select").chosen();
+    });
+  </script>
+    <h1>Valve Addition</h1>
+    <h1>Choose Components</h1>
+<form method="post" action="/sample">
+    <select class="chzn-select" multiple="true" name="components" id="components" style="width:700px;">
+      <% compo.forEach(function(comp) { %>
+          <option value='<%= comp.name %>'><%= comp.name %></option>
+      <% }); %>
+    </select>
+
+    <div id="sam">
+    </div>
+<br><br>
+<select class="chzn-select" multiple="true" name="options" id="options" style="width:700px;">
+
+</select>
+
+<div id="target">
+Click here
+</div>
+    </form>
+    <script>
+
+$("#target")
+.click(function() {
+  $("#options").empty();
+  var wholeList =[];
+  var str = "";
+  $( "select option:selected" ).each(function() {
+    str += "<option value='"+$( this ).text()+"'>"+$( this ).text() + "</option>";
+    wholeList.push($( this ).text())
+  });
+  // $( "#sam" ).html( str );
+  $("#options").append(str);
+  $("#options").trigger("chosen:updated")
+  console.log(wholeList);
+})
+
+$( "#components" )
+  .change(function () {
+    // document.getElementById("#options").innerHTML = data
+  })
+  // .change();
+</script>
   </body>
 </html>

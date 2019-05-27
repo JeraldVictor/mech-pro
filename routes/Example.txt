@@ -1,0 +1,112 @@
+//Valve list
+{
+  name: "New Standard Valve 15",
+  desc: "This is a test valve in 15 MM",
+  qty: 1,
+  componentList: [
+    {
+      componentName: "15 CAST IRON FP BV BODY 3P",
+      quantity: 1,
+      opt: true,
+      optComponentList: [
+        {
+          componentName: "15 CF8M FP BV SC 3PD ENDPIECE",
+          quantity: 1
+        },
+        {
+          componentName: "15 CF8M FP BV SC IPD BODY",
+          quantity: 1
+        }
+      ]
+    },
+    {
+      componentName: "16 SS202 ROD DIO",
+      quantity: 2,
+      opt: true,
+      optComponentList: [
+        {
+          componentName: "18 SS202 ROD DIO",
+          quantity: 3
+        }
+      ]
+    },
+    {
+      componentName: "28*22*3 MOS2 FL STEMSEL",
+      quantity: 3
+    }
+  ]
+}
+
+//Valve check:
+{
+name: "New Standard Valve 15",
+qty: 1,
+compList: [
+  {
+    componentName: "15 CAST IRON FP BV BODY 3P",
+    quantity: 1,
+    defaultQty: 1,
+    inventoryQty: 40,
+    optComponentList: [
+      {
+        componentName: "15 CF8M FP BV SC 3PD ENDPIECE",
+        quantity: 1,
+        defaultQty: 1,
+        inventoryQty: 40
+      },
+      {
+        componentName: "15 CF8M FP BV SC IPD BODY",
+        quantity: 1,
+        defaultQty: 1,
+        inventoryQty: 40
+      }
+    ]
+  },
+  {
+    componentName: "16 SS202 ROD DIO",
+    quantity: 2,
+    defaultQty: 2,
+    opt: true,
+    inventoryQty: 3,
+    optComponentList: [
+      {
+        componentName: "18 SS202 ROD DIO",
+        quantity: 3,
+        defaultQty: 3,
+        inventoryQty: 40
+      }
+    ]
+  },
+  {
+    componentName: "28*22*3 MOS2 FL STEMSEL",
+    quantity: 3,
+    defaultQty: 3,
+    inventoryQty: 3
+  }
+]
+}
+
+//if inventoryQty == 0 check if the component has opt if so check if the first component has stock, else second...
+//if inventoryQty == 0 and no opt then say the component is not available to make the valve required.
+//if inventoryQty
+
+New Valve:
+
+{"name":"25 CAST IRON FULL PORT BODY","measurement":"MM","quantity":"1","_id":"72fef5f17ccf46bb90ea1ce6850884b1"}
+{"name":"25 CAST IRON FULL PORT END PIECE MW11","measurement":"MM","quantity":"1","_id":"ee79dec70d8b42878230050895055524"},
+{"name":"42X25X5 PTFE SEAT","measurement":"MM","quantity":"1","_id":"9b3fbfc9278442fa965c2c642f624af1"},
+  {"name":"MOS2 SEAT","measurement":"MM","quantity":"1","_id":"a326439f517e45cea9a5038199bdf96d"},
+{"name":"32X22X3 PTFE SEAT","measurement":"MM","quantity":"1","_id":"fa111b0f80464b5399ff1872cbbf1f84"},
+{"name":"52X48X1.5 PTFE BODY SEAL","measurement":"MM","quantity":"1","_id":"f41ae867daa147ad90c042cd627667af"},
+{"name":"304 S.S HOLLOW BALL","measurement":"MM","quantity":"1","_id":"f2368bd038ad45c38d2112e9ad0095d1"},
+  {"name":"316 S.S HOLLOW BALL","measurement":"MM","quantity":"1","_id":"c6bb1524bb5244c6b4ac23804a0aa1c7"},
+{"name":"202 SPINDLE DIA 18","measurement":"MM","quantity":"1","_id":"3332cdc400f24831b691aea62150c2d f"},
+  {"name":"304 S.S SPINDLE","measurement":"MM","quantity":"1","_id":"4648a668384741118a47083ba4b24a74"},
+{"name":"202 S.S METAL WASHER DIA 18","measurement":"MM","quantity":"1","_id":"b25e34b92f054282a79e4d38fd6a4d30"},
+{"name":"M.S SPRING WASHER 10","measurement":"MM","quantity":"1","_id":"4a41d324a0e14e6f9432f5162c4e2a43"},
+{"name":"M.S PLATE WASHER 1/2 INCH","measurement":"MM","quantity":"1","_id":"8ecc891cdd354f5397ccee938fcaf6e3"},
+{"name":"M.S STOPPER PLATE 9 SQ","measurement":"MM","quantity":"1","_id":"68bc9ef77ff44d4abf576b0ebc3309d3"},
+{"name":"M.S HAND LEVER 170 MM","measurement":"MM","quantity":"1","_id":"a2e00f6bb5a043c3971b4be0bb99594b"},
+{"name":"M8*48 MS STUD","measurement":"MM","quantity":"1","_id":"c73eabc9335549d7b1fe3af8d3e1dbe1"},
+{"name":"M8 MS NUT","measurement":"MM","quantity":"16,094","_id":"0c2db66468e34bfeac23f7090de28498"},
+{"name":"M10 MS NUT","measurement":"MM","quantity":"20,631","_id":"fda7ac3ccbe64020b6a458ef2fe373bd"},

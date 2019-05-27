@@ -7,11 +7,14 @@
   },
   "dependencies": {
     "cookie-parser": "~1.4.3",
+    "csv": "^5.1.1",
+    "csv-parse": "^4.3.4",
     "debug": "~2.6.9",
     "diskdb": "^0.1.17",
     "ejs": "~2.5.7",
     "express": "~4.16.0",
     "http-errors": "~1.6.2",
-    "morgan": "~1.9.0"
+    "morgan": "~1.9.0",
+    "request": "^2.88.0"
   }
 }
